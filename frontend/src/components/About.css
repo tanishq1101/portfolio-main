@@ -1,0 +1,103 @@
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    align-items: start;
+}
+
+.about-bio-card {
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: oklch(0.13 0.018 250 / 0.6);
+    border: 1px solid oklch(0.65 0.02 250 / 0.1);
+}
+
+.about-bio-header {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.about-bio-icon {
+    font-size: 1.5rem;
+}
+
+.about-bio-label {
+    font-size: 1rem;
+    font-weight: 700;
+    color: oklch(0.96 0.005 250);
+}
+
+.about-bio-text {
+    font-size: 0.95rem;
+    color: oklch(0.65 0.02 250);
+    line-height: 1.75;
+}
+
+.about-quick-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid oklch(0.65 0.02 250 / 0.1);
+}
+
+.about-info-pill {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: oklch(0.65 0.02 250);
+}
+
+.about-info-pill a {
+    color: oklch(0.65 0.22 250);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.about-info-pill a:hover {
+    color: oklch(0.72 0.18 210);
+}
+
+.about-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.about-detail-card {
+    padding: 1.5rem;
+    background: oklch(0.13 0.018 250 / 0.6);
+    border: 1px solid oklch(0.65 0.02 250 / 0.1);
+}
+
+.about-detail-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: oklch(0.96 0.005 250);
+    margin-bottom: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag-cyan {
+    background: oklch(0.72 0.18 210 / 0.1) !important;
+    border-color: oklch(0.72 0.18 210 / 0.25) !important;
+    color: oklch(0.72 0.18 210) !important;
+}
+
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}

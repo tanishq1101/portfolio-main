@@ -1,0 +1,124 @@
+.media-admin .upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.media-admin .upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.media-admin .section-help {
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    color: oklch(0.65 0.02 250);
+}
+
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.media-card {
+    padding: 0.75rem !important;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    background: oklch(0.13 0.018 250 / 0.6) !important;
+    border: 1px solid oklch(0.65 0.02 250 / 0.15) !important;
+    border-radius: 1rem;
+    backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
+}
+
+.media-card:hover {
+    transform: translateY(-4px);
+    background: oklch(0.13 0.018 250 / 0.8) !important;
+    border-color: oklch(0.65 0.22 250 / 0.3) !important;
+    box-shadow: 0 8px 32px oklch(0 0 0 / 0.2);
+}
+
+.media-preview {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 0.625rem;
+    overflow: hidden;
+    background: oklch(0.08 0.015 250);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.media-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.media-card:hover .media-preview img {
+    transform: scale(1.05);
+}
+
+.media-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.media-name {
+    font-size: 0.8rem;
+    color: oklch(0.65 0.02 250);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;
+}
+
+.media-actions {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.btn-icon {
+    background: transparent;
+    border: none;
+    color: oklch(0.65 0.02 250);
+    width: 30px;
+    height: 30px;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-icon:hover {
+    background: oklch(0.65 0.22 250 / 0.15);
+    color: oklch(0.96 0.005 250);
+}
+
+.btn-icon.delete:hover {
+    background: oklch(0.65 0.22 25 / 0.15);
+    color: oklch(0.65 0.22 25);
+}
+
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0;
+    gap: 1rem;
+    color: oklch(0.65 0.02 250);
+    border: 2px dashed oklch(0.65 0.02 250 / 0.2);
+    border-radius: 1rem;
+}

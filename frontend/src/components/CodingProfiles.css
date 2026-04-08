@@ -1,0 +1,96 @@
+.profiles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.github-stats-card {
+    margin-bottom: 2.5rem;
+    padding: 2.5rem;
+    display: flex;
+    justify-content: center;
+    background: rgba(14, 14, 14, 0.4);
+    border: 1px solid var(--ghost-border);
+    border-radius: 0.25rem;
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+}
+
+.github-stats-img {
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 20px rgba(0, 217, 255, 0.05));
+}
+
+.profile-link-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 2rem;
+    background: rgba(14, 14, 14, 0.4);
+    border: 1px solid var(--ghost-border);
+    border-radius: 0.25rem; /* Sharp engineered corners */
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    cursor: pointer;
+    backdrop-filter: blur(20px);
+}
+
+.profile-link-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.profile-link-card h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: -0.01em;
+}
+
+.profile-link-card p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+.profile-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--ghost-border);
+    color: var(--primary-accent);
+    transition: all 0.4s ease;
+}
+
+.profile-link-card:hover .profile-icon {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--primary-accent);
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
+}
+
+/* Accent per platform */
+.profile-github .profile-icon { color: #ffffff; }
+.profile-leetcode .profile-icon { color: #FFA116; }
+.profile-codechef .profile-icon { color: #5B4638; }
+
+@media (max-width: 768px) {
+    .profiles-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .github-stats-card {
+        padding: 1.5rem;
+    }
+}
