@@ -1,16 +1,33 @@
-# React + Vite
+# Portfolio Frontend (Vite + React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend for the portfolio website.
 
-Currently, two official plugins are available:
+## Setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Create your env file:
+   ```bash
+   cp .env.example .env
+   ```
+3. Update `.env` with your values.
 
-## React Compiler
+## Required Environment Variables
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- `VITE_API_URL`: Backend API base URL (for example `http://localhost:5005/api`).
+- `VITE_CLERK_PUBLISHABLE_KEY`: Clerk publishable key for admin authentication.
 
-## Expanding the ESLint configuration
+Optional:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `VITE_CLERK_JWT_TEMPLATE`: Custom Clerk JWT template name (only if your backend expects one).
+
+If `VITE_CLERK_PUBLISHABLE_KEY` is not set, public pages still work but admin sign-in/sign-up is disabled.
+
+## Scripts
+
+- `npm run dev`: Start local development server.
+- `npm run build`: Build for production.
+- `npm run preview`: Preview production build locally.
+- `npm run lint`: Run lint checks.
